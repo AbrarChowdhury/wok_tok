@@ -7,6 +7,7 @@ WokTok is a minimalist chat application with a unique twist - users can only sen
 - Real-time messaging: Chat with friends in real-time.
 - Hands free: Send messages without typing.
 - Video calling
+- Walking Stats
 
 ## Installation
 1. Clone the repository.
