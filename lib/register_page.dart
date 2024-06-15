@@ -2,8 +2,23 @@
 
 import 'package:flutter/material.dart';
 
-class Register extends StatelessWidget {
+class Register extends StatefulWidget {
   const Register ({super.key});
+
+  @override
+  State<Register> createState() => _RegisterState();
+}
+
+class _RegisterState extends State<Register> {
+  final TextEditingController nameController = TextEditingController();
+  final TextEditingController phoneController = TextEditingController();
+  final TextEditingController passwordController = TextEditingController();
+  void handlePress(){
+    print("button pressed");
+    print("Name: ${nameController.text}");
+    print("Phone Number: ${phoneController.text}");
+    print("Password: ${passwordController.text}");
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -15,9 +30,14 @@ class Register extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [ 
             Image(image: AssetImage('assets/woktok_logo.jpg')),
-            TextField(decoration: InputDecoration(hintText: "Name"),),
-            TextField(decoration: InputDecoration(hintText: "Phone Number"),),
-            TextField(decoration: InputDecoration(hintText: "Password"),obscureText: true,),
+            TextField(controller: nameController, decoration: InputDecoration(hintText: "Name"),),
+            TextField(controller: phoneController, decoration: InputDecoration(hintText: "Phone Number"),),
+            TextField(controller: passwordController, decoration: InputDecoration(hintText: "Password"),obscureText: true,),
+            TextButton(
+              onPressed: handlePress, 
+              child: Text("Create Account"),
+              
+            )
           ]),
       ),
     ) ;
