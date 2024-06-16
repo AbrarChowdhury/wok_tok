@@ -1,6 +1,5 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import './register_page.dart';
+import 'pages/register_page.dart';
 void main() {
   runApp(const MainApp());
 }

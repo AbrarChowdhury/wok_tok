@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import 'package:flutter_wok_tok/pages/chats_page.dart';
 
 class Register extends StatefulWidget {
   const Register ({super.key});
@@ -18,6 +19,7 @@ class _RegisterState extends State<Register> {
     print("Name: ${nameController.text}");
     print("Phone Number: ${phoneController.text}");
     print("Password: ${passwordController.text}");
+    Navigator.push(context, MaterialPageRoute(builder: (context)=>ChatsPage()));
   }
 
   @override
